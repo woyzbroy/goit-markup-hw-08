@@ -1,0 +1,34 @@
+.work {
+  padding: $section-padding;
+  &--no-padding {
+    padding-top: 0;
+  }
+  &__heading {
+    @include section-heading;
+  }
+  &__list {
+    @include flex-center;
+    list-style: none;
+    gap: $flex-gap;
+    justify-content: center;
+  }
+  &__title {
+    @include flex-center;
+    position: relative;
+    justify-content: center;
+    height: 70px;
+    bottom: 70px;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-size: $font-default;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: $colorWhite;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  &__link {
+    display: block;
+    height: 294px;
+    text-decoration: none;
+  }
+}

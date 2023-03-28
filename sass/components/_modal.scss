@@ -1,0 +1,157 @@
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity $transition-delay, visibility $transition-delay, transform 1s;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  background-color: $colorWhite;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: $item-border-radius;
+  transform: translate(-50%, -50%);
+  &__close-btn {
+    position: absolute;
+    width: $medium;
+    height: $medium;
+    top: 8px;
+    right: 8px;
+    color: $fontColorMain;
+    @include item-border(rgba(0, 0, 0, 0.1));
+    border-radius: 50%;
+    background-color: var(--colorWhite);
+    cursor: pointer;
+    transition: background-color $transition-delay, color $transition-delay;
+    &:hover,
+    &:focus {
+      color: $colorWhite;
+      background-color: $selectionColor;
+    }
+  }
+  &__heading {
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: $font-bold;
+    font-size: $small;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $socialsColor;
+  }
+  &__label {
+    display: block;
+    position: relative;
+    margin-bottom: $xsmall;
+  }
+  &__input-heading {
+    display: block;
+    text-transform: capitalize;
+    font-size: $font-s;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: $fontColorSecondary;
+  }
+  &__input {
+    display: block;
+    margin-top: 4px;
+    padding: 0;
+    padding-left: 42px;
+    width: 448px;
+    height: 40px;
+    @include item-border(rgba(33, 33, 33, 0.2));
+    border-radius: $item-border-radius;
+    transition: border-color $transition-delay;
+    &:hover,
+    &:focus {
+      border-color: $selectionColor;
+      outline: none;
+    }
+  }
+  &__input-icon {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    transition: fill $transition-delay;
+  }
+  &__label--margin-bottom {
+    margin-bottom: 20px;
+  }
+  &__textarea {
+    display: block;
+    resize: none;
+    margin-top: 4px;
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    @include item-border(rgba(33, 33, 33, 0.2));
+    border-radius: $item-border-radius;
+    transition: border-color $transition-delay;
+    &:hover,
+    &:focus {
+      border-color: $selectionColor;
+      outline: none;
+    }
+    &::placeholder {
+      font-size: $font-s;
+      line-height: 1.67;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &__label-checkbox {
+    @include flex-center;
+    position: relative;
+    margin-bottom: $medium;
+    margin-left: 15px;
+  }
+  &__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    height: 15px;
+    width: 16px;
+    border-radius: $checkbox-border-radius;
+  }
+  &__checkbox-icon {
+    position: absolute;
+    cursor: pointer;
+  }
+  &__checkbox-icon--on {
+    visibility: hidden;
+    border-radius: $checkbox-border-radius;
+  }
+  &__checkbox-text {
+    display: block;
+    margin-left: 24px;
+    font-size: $font-default;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $fontColorSecondary;
+  }
+  &__btn {
+    @extend .hero__btn;
+    text-transform: capitalize;
+  }
+  &__checkbox-text a {
+    color: $selectionColor;
+  }
+  &__input:focus ~ .modal__input-icon,
+  &__input:hover ~ .modal__input-icon {
+    fill: $selectionColor;
+  }
+  &__checkbox-input:checked ~ .modal__checkbox-icon--on {
+    visibility: visible;
+  }
+}

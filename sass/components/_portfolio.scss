@@ -1,0 +1,93 @@
+.portfolio {
+  padding: $section-padding;
+  &__btn-box {
+    @include flex-center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: $large;
+  }
+  &__btn {
+    background-color: $portfolioButton;
+    border-radius: $item-border-radius;
+    border-style: none;
+    color: $socialsColor;
+    font-weight: $font-thick;
+    font-size: $font-m;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    padding: 6px 22px;
+    transition: color $transition-delay, background-color $transition-delay,
+      box-shadow $transition-delay;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      background-color: $selectionColor;
+      color: $colorWhite;
+    }
+  }
+  &__list {
+    @include flex-center;
+    list-style: none;
+    gap: $flex-gap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    background: $colorWhite;
+    transition: box-shadow $transition-delay;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__hidden {
+    position: relative;
+    overflow: hidden;
+  }
+  &__text-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 49px 45px 49px 24px;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: $colorWhite;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform $transition-delay;
+  }
+  &__description-box {
+    padding: 20px 24px;
+    border-left: 1px solid $backgroundProductCard;
+    border-right: 1px solid $backgroundProductCard;
+    border-bottom: 1px solid $backgroundProductCard;
+  }
+  &__heading {
+    font-weight: $font-bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $socialsColor;
+    margin-bottom: 4px;
+  }
+  &__paragraph {
+    font-weight: 400px;
+    font-size: $font-m;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $fontColorSecondary;
+  }
+  &__link:hover .portfolio__text-overlay,
+  &__link:focus .portfolio__text-overlay {
+    transform: translatey(0);
+  }
+}

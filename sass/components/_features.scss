@@ -1,0 +1,39 @@
+.features {
+  padding: $section-padding;
+  &__svg-list {
+    @include flex-center;
+    list-style: none;
+    gap: $flex-gap;
+    margin-bottom: $medium;
+  }
+  &__svg-item {
+    @include flex-center;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    background-color: $portfolioButton;
+    border-radius: $item-border-radius;
+  }
+  &__list {
+    @include flex-center;
+    list-style: none;
+    gap: $flex-gap;
+  }
+  &__title {
+    display: block;
+    font-weight: $font-bold;
+    font-size: $font-default;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $socialsColor;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    display: block;
+    font-size: $font-default;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $fontColorSecondary;
+  }
+}

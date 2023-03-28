@@ -1,0 +1,35 @@
+.hero {
+  padding: $hero-padding;
+  color: $colorWhite;
+  background-color: $backgroundColorSecondary;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/headerphoto.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  &__heading {
+    margin-bottom: $medium;
+    font-size: $font-xxl;
+    font-weight: $font-biggest;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  &__btn {
+    @include button;
+    display: block;
+    margin: $margin-center;
+    width: 200px;
+    height: $large;
+    color: $colorWhite;
+    background-color: $selectionColor;
+    transition: color $transition-delay, background-color $transition-delay,
+      box-shadow $transition-delay;
+    &:hover,
+    &:focus {
+      color: $fontColorMain;
+      background-color: $portfolioButton;
+      box-shadow: $default-box-shadow;
+    }
+  }
+}

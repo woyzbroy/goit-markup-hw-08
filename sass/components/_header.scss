@@ -1,0 +1,78 @@
+.header {
+  &__container {
+    @include flex-center;
+  }
+  &__link-logo {
+    @include logo;
+    display: block;
+    margin-right: 93px;
+  }
+  &__logo-blue {
+    color: $selectionColor;
+  }
+  &__logo-black {
+    color: $fontColorMain;
+  }
+  &__list {
+    @include flex-center;
+    gap: $flex-gap;
+    margin-left: auto;
+    list-style: none;
+  }
+  &__link {
+    @include flex-center;
+    font-size: $font-default;
+    font-weight: $font-thick;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $fontColorSecondary;
+    fill: $fontColorSecondary;
+    transition: color $transition-delay, fill $transition-delay;
+    &:hover,
+    &:focus {
+      color: $selectionColor;
+      fill: $selectionColor;
+    }
+  }
+  &__icon {
+    margin-right: $xsmall;
+  }
+  &--border {
+    border-bottom: 1px solid $backgroundBorderBottom;
+  }
+}
+.nav {
+  &__list {
+    gap: $nav-gap;
+    display: flex;
+    list-style: none;
+  }
+  &__link {
+    display: block;
+    font-size: $font-default;
+    font-weight: $font-thick;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $socialsColor;
+    padding: $header-padding;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $selectionColor;
+    }
+    &--current {
+      color: $selectionColor;
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        top: 32px;
+        height: 4px;
+        background: $selectionColor;
+        border-radius: $checkbox-border-radius;
+      }
+    }
+  }
+}

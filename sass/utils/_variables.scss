@@ -1,0 +1,95 @@
+// Color
+
+$backgroundColorMain: #e5e5e5;
+$backgroundColorSecondary: #2f303a;
+$fontColorMain: #000000;
+$fontColorSecondary: #757575;
+$selectionColor: #2196f3;
+$socialsColor: #212121;
+$colorWhite: #ffffff;
+$colorContactLinks: #999999;
+$portfolioButton: #f5f4fa;
+$backgroundBorderBottom: #ececec;
+$backgroundProductCard: #eeeeee;
+$socialIcon: #afb1b8;
+
+// Text/Item Format
+
+$logo-font: 'Raleway', sans-serif;
+$main-font: 'Roboto', sans-serif;
+$font-thick: 500;
+$font-bold: 700;
+$font-biggest: 900;
+$font-s: 12px;
+$font-default: 14px;
+$font-m: 16px;
+$font-l: 26px;
+$font-xl: 36px;
+$font-xxl: 44px;
+$checkbox-border-radius: 2px;
+$item-border-radius: 4px;
+$default-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+// Container
+
+$container-width: 1200px;
+
+// Padding/Margin
+
+$section-padding: 94px 0px;
+$section-footer: 94px;
+$hero-padding: 200px 0;
+$xsmall: 10px;
+$small: 20px;
+$medium: 30px;
+$large: 50px;
+$flex-gap: 30px;
+$nav-gap: 46px;
+$header-padding: 32px 0;
+$margin-center: 0 auto;
+$margin-section-heading: 0 0 50px 0;
+
+// Transition
+
+$transition-delay: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Mixin
+
+@mixin item-border($borderColor) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $borderColor;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button {
+  cursor: pointer;
+  font-weight: $font-bold;
+  font-size: $font-m;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: $item-border-radius;
+  border-style: none;
+}
+@mixin logo {
+  font-family: $logo-font;
+  font-size: $font-l;
+  font-weight: $font-bold;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+@mixin section-heading {
+  font-weight: $font-bold;
+  font-size: $font-xl;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $socialsColor;
+  margin: $margin-section-heading;
+}

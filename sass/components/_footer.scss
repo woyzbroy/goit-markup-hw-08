@@ -1,0 +1,126 @@
+.footer {
+  background-color: $backgroundColorSecondary;
+  padding: 60px 0;
+  &__container {
+    display: flex;
+  }
+  &__link-logo {
+    display: block;
+    font-family: $logo-font;
+    font-size: $font-l;
+    font-weight: $font-bold;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+  &__logo-blue {
+    color: $selectionColor;
+  }
+  &__logo-white {
+    color: $colorWhite;
+  }
+  &__address {
+    margin: 20px 0 0 0;
+  }
+  &__address-text {
+    font-style: normal;
+    font-size: $font-default;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $colorWhite;
+  }
+  &__address-list {
+    list-style: none;
+  }
+  &__address-link {
+    font-style: normal;
+    font-size: $font-default;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color $transition-delay;
+    &:hover,
+    &:focus {
+      color: $selectionColor;
+    }
+  }
+  &__address-link--underline {
+    text-decoration: underline;
+  }
+  &__social {
+    margin: 12px 78px 0 70px;
+  }
+  &__social-heading {
+    margin-bottom: $small;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-size: $font-default;
+    line-height: 1.14;
+    color: $colorWhite;
+    letter-spacing: 0.03em;
+  }
+  &__social-list {
+    @include flex-center;
+    list-style: none;
+    gap: $xsmall;
+  }
+  &__social-link {
+    @extend .team__icon-link;
+    background: rgba(255, 255, 255, 0.1);
+    fill: $colorWhite;
+    &:hover,
+    &:focus {
+      background-color: $selectionColor;
+      fill: $colorWhite;
+      border-radius: 50%;
+    }
+  }
+  &__form {
+    margin-top: 12px;
+  }
+  &__form-heading {
+    @extend .footer__social-heading;
+  }
+  &__label {
+    display: inline-block;
+    margin-right: 12px;
+  }
+  &__input {
+    color: $colorWhite;
+    width: 358px;
+    height: $large;
+    padding-left: $font-m;
+    @include item-border(rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: $item-border-radius;
+    background-color: $backgroundColorSecondary;
+    &::placeholder {
+      color: $colorWhite;
+      opacity: 0.6;
+      font-size: $font-m;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    }
+  }
+  &__btn {
+    @include button;
+    position: relative;
+    padding: 10px 76px 10px 42px;
+    color: $colorWhite;
+    background-color: $selectionColor;
+    transition: box-shadow $transition-delay;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.2);
+    }
+  }
+  &__input-icon {
+    fill: $colorWhite;
+    position: absolute;
+    left: 148px;
+    top: 13px;
+    bottom: 13px;
+    right: 28px;
+  }
+}

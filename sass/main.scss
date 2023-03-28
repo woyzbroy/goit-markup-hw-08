@@ -1,0 +1,36 @@
+@import 'utils/variables';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/features';
+@import 'components/work';
+@import 'components/team';
+@import 'components/clients';
+@import 'components/footer';
+@import 'components/modal';
+@import 'components/portfolio';
+
+body {
+  background-color: $colorWhite;
+  font-family: $main-font;
+  color: $socialsColor;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+.container {
+  width: $container-width;
+  margin: $margin-center;
+  padding-left: $xsmall;
+  padding-right: $xsmall;
+}

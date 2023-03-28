@@ -1,0 +1,27 @@
+.clients {
+  padding: $section-padding;
+  &__heading {
+    @include section-heading;
+  }
+  &__list {
+    @include flex-center;
+    list-style: none;
+    gap: $flex-gap;
+    justify-content: center;
+  }
+  &__link {
+    @include flex-center;
+    @include item-border($socialIcon);
+    border-radius: $item-border-radius;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    fill: $socialIcon;
+    transition: border-color $transition-delay, fill $transition-delay;
+    &:hover,
+    &:focus {
+      fill: $selectionColor;
+      border-color: $selectionColor;
+    }
+  }
+}
